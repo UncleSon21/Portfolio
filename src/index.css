@@ -9,8 +9,8 @@ html,
 body {
   width: 100dvw;
   overflow-x: hidden;
-  background-color: black;
-  color: white;
+  background-color: #070B14;
+  color: #EAF2FF;
   scroll-behavior: smooth;
   font-family: "Mona Sans", sans-serif;
 }
@@ -21,12 +21,12 @@ section {
 
 @theme {
   --font-sans: "Mona Sans", sans-serif;
-  --color-white-50: #d9ecff;
-  --color-black-50: #1c1c21;
-  --color-black-100: #0e0e10;
-  --color-black-200: #282732;
-  --color-blue-50: #839cb5;
-  --color-blue-100: #2d2d38;
+  --color-white-50: #EAF2FF;
+  --color-black-50: #141826;
+  --color-black-100: #0B1020;
+  --color-black-200: #121A2E;
+  --color-blue-50: #9BB3D1;
+  --color-blue-100: #1A2338;
 }
 
 @layer utilities {
@@ -231,7 +231,7 @@ section {
   }
 
   .card-border {
-    @apply border border-black-50 bg-black-100;
+    @apply border border-black-50 bg-[#070B14];
   }
 
   .marquee-item {
@@ -243,7 +243,7 @@ section {
   }
 
   .timeline {
-    @apply absolute z-30 h-[110%] -top-10 w-14 md:w-28 bg-black;
+    @apply absolute z-30 h-[110%] -top-10 w-14 md:w-28 bg-[#070B14] rounded-4xl;
   }
 
   .timeline-logo {
@@ -470,3 +470,64 @@ section {
 .card:hover::before {
   opacity: 1;
 }
+.intro-slide {
+  position: relative;
+  width: 40%;
+  overflow: hidden;
+
+  /* 3 lines of text (hi/name/role) */
+  --intro-h: clamp(72px, 8vw, 92px);
+  height: var(--intro-h);
+}
+
+.intro-wrapper {
+  display: flex;
+  flex-direction: column;
+  will-change: transform;
+  animation: introSlider 12s infinite;
+}
+
+.intro-item {
+  height: var(--intro-h);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.intro-item p { line-height: 1.2; }
+
+/* fade edges */
+.intro-slide::before,
+.intro-slide::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 12px;
+  pointer-events: none;
+  z-index: 2;
+}
+.intro-slide::before {
+  top: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0));
+}
+.intro-slide::after {
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0));
+}
+
+/* 3 languages (matches your intros array) */
+@keyframes introSlider {
+  /* slide 1 */
+  0%, 20%   { transform: translateY(0); }
+
+  /* slide 2 */
+  33%, 53%  { transform: translateY(calc(-1 * var(--intro-h))); }
+
+  /* slide 3 */
+  66%, 86%  { transform: translateY(calc(-2 * var(--intro-h))); }
+
+  /* stay then loop */
+  100%      { transform: translateY(calc(-2 * var(--intro-h))); }
+}
+

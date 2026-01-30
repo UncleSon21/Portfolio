@@ -1,9 +1,5 @@
 const navLinks = [
   {
-    name: "Work",
-    link: "#work",
-  },
-  {
     name: "Experience",
     link: "#experience",
   },
@@ -12,8 +8,8 @@ const navLinks = [
     link: "#skills",
   },
   {
-    name: "Testimonials",
-    link: "#testimonials",
+    name: "Projects",
+    link: "#projects",
   },
 ];
 
@@ -29,10 +25,10 @@ const words = [
 ];
 
 const counterItems = [
-  { value: 15, suffix: "+", label: "Years of Experience" },
+  { value: 2, suffix: "+", label: "Years of Experience" },
   { value: 200, suffix: "+", label: "Satisfied Clients" },
-  { value: 108, suffix: "+", label: "Completed Projects" },
-  { value: 90, suffix: "%", label: "Client Retention Rate" },
+  { value: 5, suffix: "+", label: "Completed Projects" },
+  { value: 36, suffix: "%", label: "Completed KPI" },
 ];
 
 const logoIconsList = [
@@ -132,54 +128,57 @@ const techStackIcons = [
     rotation: [0, -Math.PI / 2, 0],
   },
   {
+    name: "TypeScript",
+    modelPath: "/models/ts-logo.glb",
+    scale: 0.05,
+    rotation: [0, 0, 0],
+  },
+  {
     name: "Interactive Developer",
     modelPath: "/models/three.js-transformed.glb",
     scale: 0.05,
     rotation: [0, 0, 0],
   },
-  {
-    name: "Project Manager",
-    modelPath: "/models/git-svg-transformed.glb",
-    scale: 0.05,
-    rotation: [0, -Math.PI / 4, 0],
-  },
 ];
 
 const expCards = [
   {
-    review: "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
-    imgPath: "/images/exp1.png",
-    logoPath: "/images/logo1.png",
-    title: "Frontend Developer",
-    date: "January 2023 - Present",
+    review:
+      "Son was reliable and quick to ship. He helped deliver key dashboard features and made the metrics easier to understand with clean UI and clear data presentation.",
+    imgPath: "/images/DigiWizeLogo.svg",
+    logoPath: "/images/DigiWizeLogo.svg",
+    title: "Software Engineer Intern (Full Stack)",
+    date: "2024 - 2025",
     responsibilities: [
-      "Developed and maintained user-facing features for the Hostinger website.",
-      "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-      "Optimized web applications for maximum speed and scalability.",
+      "Built features for an engineering analytics dashboard, including key DORA metrics visualizations.",
+      "Worked in a small team using TypeScript/React and backend services to deliver end-to-end functionality.",
+      "Collaborated with teammates to implement reusable components and improve overall UI consistency.",
     ],
   },
   {
-    review: "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
-    imgPath: "/images/exp2.png",
-    logoPath: "/images/logo2.png",
-    title: "Full Stack Developer",
-    date: "June 2020 - December 2023",
+    review:
+      "Son handled support requests calmly and professionally, resolving issues quickly and communicating clearly with users. He was dependable and easy to work with.",
+    imgPath: "/images/exp_uow.png",
+    logoPath: "/images/exp_uow.png",
+    title: "IT Support Technician",
+    date: "2023 - 2024",
     responsibilities: [
-      "Led the development of Docker's web applications, focusing on scalability.",
-      "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
-      "Contributed to open-source projects that were used with the Docker ecosystem.",
+      "Provided technical support for staff and students, troubleshooting hardware, software, and connectivity issues.",
+      "Managed tickets, documented fixes, and escalated complex issues when required.",
+      "Helped improve support efficiency by standardizing common troubleshooting steps and notes.",
     ],
   },
   {
-    review: "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
-    imgPath: "/images/exp3.png",
-    logoPath: "/images/logo3.png",
-    title: "React Native Developer",
-    date: "March 2019 - May 2020",
+    review:
+      "Son built a modern florist e-commerce site with strong attention to UI detail and user experience. The project shows real product thinking and strong front-end skills.",
+    imgPath: "/images/exp-vaniaflorist.png",
+    logoPath: "/images/logo-vaniaflorist.png",
+    title: "Founder / Full Stack Developer (Personal Project)",
+    date: "2025 - Present",
     responsibilities: [
-      "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-      "Improved app performance and user experience through code optimization and testing.",
-      "Coordinated with the product team to implement features based on feedback.",
+      "Designed and developed a florist e-commerce web app with search/filter/cart and clean product pages.",
+      "Implemented a scalable code structure in TypeScript with reusable UI patterns and animations.",
+      "Planned integrations for payments, backend data, and deployment for a real business launch.",
     ],
   },
 ];
@@ -248,18 +247,17 @@ const socialImgs = [
   {
     name: "insta",
     imgPath: "/images/insta.png",
+    link: "https://www.instagram.com/sonnyl__/"
   },
   {
     name: "fb",
     imgPath: "/images/fb.png",
-  },
-  {
-    name: "x",
-    imgPath: "/images/x.png",
+    link: "https://www.facebook.com/son.hung.3538039/"
   },
   {
     name: "linkedin",
     imgPath: "/images/linkedin.png",
+    link: "https://linkedin.com/in/son-le-9b8546266"
   },
 ];
 
