@@ -472,7 +472,7 @@ section {
 }
 .intro-slide {
   position: relative;
-  width: 40%;
+  width: 8%;
   overflow: hidden;
 
   /* 3 lines of text (hi/name/role) */
@@ -507,14 +507,7 @@ section {
   pointer-events: none;
   z-index: 2;
 }
-.intro-slide::before {
-  top: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0));
-}
-.intro-slide::after {
-  bottom: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0));
-}
+
 
 /* 3 languages (matches your intros array) */
 @keyframes introSlider {

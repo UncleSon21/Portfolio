@@ -35,15 +35,16 @@ const Hero = () => {
               {/* avatar */}
               <div className="relative shrink-0">
                 <div className="absolute -inset-1 rounded-full blur-md bg-white-50/30" />
-                <div className="relative rounded-full p-[2px] bg-white-50/20 ring-1 ring-white-50/20">
+                <div className="relative rounded-full p-[2px] bg-[#070B14] ring-1 ring-[#070B14] overflow-hidden">
                   <img
                     src="/images/profile.png"
                     alt="Hung Son Le"
-                    className="xl:size-24 md:size-20 size-16 rounded-full object-cover"
+                    className="xl:size-80 md:size-20 size-16 rounded-full object-cover scale-110 object-[30%_50%]"
                   />
                 </div>
+
               </div>
-              <div className="intro-slide flex-1 min-w-0">
+              <div className="intro-slide">
                 <div className="intro-wrapper">
                   {intros.map((item, idx) => (
                     <div key={idx} className="intro-item">
