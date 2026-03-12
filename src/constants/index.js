@@ -148,6 +148,8 @@ const expCards = [
     imgPath: "/images/DigiWizeLogo.svg",
     logoPath: "/images/DigiWizeLogo.svg",
     title: "Software Engineer Intern (Full Stack)",
+    company: "DigiWize",
+    link: "https://digiwize.solutions",
     date: "2024 - 2025",
     responsibilities: [
       "Built features for an engineering analytics dashboard, including key DORA metrics visualizations.",

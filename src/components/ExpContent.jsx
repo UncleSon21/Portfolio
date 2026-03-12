@@ -9,6 +9,16 @@ const ExpContent = ({ expContent }) => {
           <li key={index}>{responsibility}</li>
         ))}
       </ul>
+      {expContent.link ? (
+        <a
+          href={expContent.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-400 hover:underline text-sm"
+        >
+          {expContent.company ?? expContent.link}
+        </a>
+      ) : null}
     </div>
   );
 };

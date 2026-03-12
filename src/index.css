@@ -3,6 +3,7 @@
 
 :root {
   --gradient: radial-gradient(circle, #e5e5e5 0%, #fff 100%);
+  --intro-h: clamp(60px, 10vw, 92px);
 }
 
 html,
@@ -476,8 +477,6 @@ section {
   min-width: 0;
   overflow: hidden;
 
-  /* 3 lines of text (hi/name/role) */
-  --intro-h: clamp(60px, 10vw, 92px);
   height: var(--intro-h);
 }
 
