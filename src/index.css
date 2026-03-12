@@ -472,11 +472,12 @@ section {
 }
 .intro-slide {
   position: relative;
-  width: 8%;
+  flex: 1;
+  min-width: 0;
   overflow: hidden;
 
   /* 3 lines of text (hi/name/role) */
-  --intro-h: clamp(72px, 8vw, 92px);
+  --intro-h: clamp(60px, 10vw, 92px);
   height: var(--intro-h);
 }
 
