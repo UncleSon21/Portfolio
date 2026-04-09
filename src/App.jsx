@@ -1,25 +1,12 @@
-import Testimonials from "./sections/Testimonials";
-import Footer from "./sections/Footer";
-import Contact from "./sections/Contact";
-import TechStack from "./sections/TechStack";
-import Experience from "./sections/Experience";
-import Hero from "./sections/Hero";
-import ShowcaseSection from "./sections/ShowcaseSection";
-import LogoShowcase from "./sections/LogoShowcase";
-import FeatureCards from "./sections/FeatureCards";
-import Navbar from "./components/NavBar";
+import { Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import BlogPost from './pages/BlogPost'
 
 const App = () => (
-  <>
-    <Navbar />
-    <Hero />
-    <LogoShowcase />
-    <FeatureCards />
-    <Experience />
-    <TechStack />
-    <Contact />
-    <Footer />
-  </>
+  <Routes>
+    <Route path="/" element={<Home />} />
+    <Route path="/blog/:slug" element={<BlogPost />} />
+  </Routes>
 );
 
-export default App;
+export default App
