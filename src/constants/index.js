@@ -11,6 +11,10 @@ const navLinks = [
     name: "Projects",
     link: "#projects",
   },
+  {
+    name: "Blog",
+    link: "#blog"
+  }
 ];
 
 const words = [
@@ -142,24 +146,54 @@ const techStackIcons = [
 ];
 const blogPosts = [
   {
-    title: "Building CobbyIQ: From Frustration to AI SaaS",
-    subtitle: "How a repeated team pain point turned into a product",
-    tag: "CobbyIQ",
-    date: "2026",
-    imgPath: "/images/exp-cobbyiq.png",
-    link: "https://cobbyiq.com",
-    excerpt:
-      "Every team has that problem — the same questions asked over and over, even though the answers are written down somewhere. CobbyIQ started as a fix for that.",
-  },
-  {
-    title: "Shipping VaniaFlorist: Building a Real E-Commerce Product",
-    subtitle: "What I learned designing and coding a florist store solo",
+    title: "Integrating Stripe and Resend into VaniaFlorist",
+    subtitle: "Payments, transactional email, and what actually tripped me up",
     tag: "VaniaFlorist",
     date: "2025",
     imgPath: "/images/exp-vaniaflorist.png",
     link: "#",
     excerpt:
-      "VaniaFlorist isn't a tutorial project — it's a real product built for a real launch. Here's what the process of going from design to deployment actually looked like.",
+      "A walkthrough of wiring up Stripe Checkout and Resend for order confirmation emails — including the edge cases and gotchas that don't show up in the docs.",
+  },
+  {
+    title: "Understanding RAG Pipelines from Scratch",
+    subtitle: "How I built CobbyIQ's AI knowledge engine and what I learned",
+    tag: "CobbyIQ",
+    date: "2026",
+    imgPath: "/images/exp-cobbyiq.png",
+    link: "#",
+    excerpt:
+      "Retrieval-Augmented Generation sounds complex until you break it down. Here is how I went from reading papers to building a working document Q&A pipeline.",
+  },
+  {
+    title: "Deploying CobbyIQ: From Local to Production",
+    subtitle: "The infrastructure decisions, mistakes, and tradeoffs along the way",
+    tag: "CobbyIQ",
+    date: "2026",
+    imgPath: "/images/exp-cobbyiq.png",
+    link: "#",
+    excerpt:
+      "Shipping a SaaS product solo means owning every layer of deployment. This is what I learned about hosting, environment config, and keeping things stable under real traffic.",
+  },
+  {
+    title: "Trying to Understand the SaaS Market as a Developer",
+    subtitle: "What I got wrong about building a product people actually want",
+    tag: "CobbyIQ",
+    date: "2026",
+    imgPath: "/images/exp-cobbyiq.png",
+    link: "#",
+    excerpt:
+      "Writing code is the easy part. Figuring out positioning, ICP, and whether anyone will pay for what you built — that is the harder lesson I am still working through.",
+  },
+  {
+    title: "Polishing VaniaFlorist's Design",
+    subtitle: "UI refinements, seasonal theming, and the details that change the feel",
+    tag: "VaniaFlorist",
+    date: "2025",
+    imgPath: "/images/exp-vaniaflorist.png",
+    link: "#",
+    excerpt:
+      "A florist store should feel alive and seasonal. This post covers the design iterations I ran on VaniaFlorist — from layout tweaks to experimenting with themes that shift with the time of year.",
   },
 ];
 const expCards = [
