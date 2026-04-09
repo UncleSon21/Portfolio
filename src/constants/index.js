@@ -140,8 +140,42 @@ const techStackIcons = [
     rotation: [0, 0, 0],
   },
 ];
-
+const blogPosts = [
+  {
+    title: "Building CobbyIQ: From Frustration to AI SaaS",
+    subtitle: "How a repeated team pain point turned into a product",
+    tag: "CobbyIQ",
+    date: "2026",
+    imgPath: "/images/exp-cobbyiq.png",
+    link: "https://cobbyiq.com",
+    excerpt:
+      "Every team has that problem — the same questions asked over and over, even though the answers are written down somewhere. CobbyIQ started as a fix for that.",
+  },
+  {
+    title: "Shipping VaniaFlorist: Building a Real E-Commerce Product",
+    subtitle: "What I learned designing and coding a florist store solo",
+    tag: "VaniaFlorist",
+    date: "2025",
+    imgPath: "/images/exp-vaniaflorist.png",
+    link: "#",
+    excerpt:
+      "VaniaFlorist isn't a tutorial project — it's a real product built for a real launch. Here's what the process of going from design to deployment actually looked like.",
+  },
+];
 const expCards = [
+    {
+    review:
+      "CobbyIQ is a clean, well-executed SaaS product. The AI integration is smooth, the UX is thoughtful, and it solves a real problem for growing teams. Strong founder execution from concept to launch.",
+    imgPath: "/images/exp-cobbyiq.png",
+    logoPath: "/images/logo-cobbyiq.png",
+    title: "Founder / AI Full Stack Developer",
+    date: "2025 - Present",
+    responsibilities: [
+      "Founded and built CobbyIQ — an AI-powered knowledge management SaaS that lets teams upload docs and get instant, sourced answers from an AI teammate.",
+      "Architected and developed the full product: AI document ingestion pipeline, semantic search, and Q&A engine with accurate page-level citations.",
+      "Designed and built the full frontend, branding, and landing page with a focus on clean UX and clear product storytelling.",
+    ],
+  },
   {
     review:
       "Son was reliable and quick to ship. He helped deliver key dashboard features and made the metrics easier to understand with clean UI and clear data presentation.",
@@ -157,6 +191,19 @@ const expCards = [
       "Collaborated with teammates to implement reusable components and improve overall UI consistency.",
     ],
   },
+    {
+    review:
+      "Son built a modern florist e-commerce site with strong attention to UI detail and user experience. The project shows real product thinking and strong front-end skills.",
+    imgPath: "/images/exp-vaniaflorist.png",
+    logoPath: "/images/logo-vaniaflorist.png",
+    title: "Founder / Full Stack Developer",
+    date: "2025 - Present",
+    responsibilities: [
+      "Designed and built a full florist e-commerce web app with product search, filter, cart, and clean product pages.",
+      "Implemented a scalable TypeScript codebase with reusable UI components and smooth animations.",
+      "Completed full build and preparing for deployment as a real business launch.",
+    ],
+  },
   {
     review:
       "Son handled support requests calmly and professionally, resolving issues quickly and communicating clearly with users. He was dependable and easy to work with.",
@@ -168,19 +215,6 @@ const expCards = [
       "Provided technical support for staff and students, troubleshooting hardware, software, and connectivity issues.",
       "Managed tickets, documented fixes, and escalated complex issues when required.",
       "Helped improve support efficiency by standardizing common troubleshooting steps and notes.",
-    ],
-  },
-  {
-    review:
-      "Son built a modern florist e-commerce site with strong attention to UI detail and user experience. The project shows real product thinking and strong front-end skills.",
-    imgPath: "/images/exp-vaniaflorist.png",
-    logoPath: "/images/logo-vaniaflorist.png",
-    title: "Founder / Full Stack Developer (Personal Project)",
-    date: "2025 - Present",
-    responsibilities: [
-      "Designed and developed a florist e-commerce web app with search/filter/cart and clean product pages.",
-      "Implemented a scalable code structure in TypeScript with reusable UI patterns and animations.",
-      "Planned integrations for payments, backend data, and deployment for a real business launch.",
     ],
   },
 ];
@@ -275,4 +309,5 @@ export {
   techStackIcons,
   techStackImgs,
   navLinks,
+  blogPosts
 };
