@@ -12,7 +12,7 @@ const navLinks = [
     link: "#projects",
   },
   {
-    name: "Blog",
+    name: "Writing",
     link: "#blog"
   }
 ];
@@ -37,37 +37,64 @@ const counterItems = [
 
 const logoIconsList = [
   {
-    imgPath: "/images/logos/company-logo-1.png",
+    name: "Earned Media",
+    imgPath: "/images/clients/earned-media.png",
   },
   {
-    imgPath: "/images/logos/company-logo-2.png",
+    name: "Salesforce",
+    imgPath: "/images/clients/salesforce.png",
   },
   {
-    imgPath: "/images/logos/company-logo-3.png",
+    name: "Rippling",
+    imgPath: "/images/clients/rippling.png",
   },
   {
-    imgPath: "/images/logos/company-logo-4.png",
+    name: "HSI Donesafe",
+    imgPath: "/images/clients/hsi-donesafe.png",
   },
   {
-    imgPath: "/images/logos/company-logo-5.png",
+    name: "The Hairy Pill",
+    imgPath: "/images/clients/the-hairy-pill.png",
   },
   {
-    imgPath: "/images/logos/company-logo-6.png",
+    name: "SP Screens",
+    imgPath: "/images/clients/sp-screens.png",
   },
   {
-    imgPath: "/images/logos/company-logo-7.png",
+    name: "Fresh Clinics",
+    imgPath: "/images/clients/fresh-clinics.png",
   },
   {
-    imgPath: "/images/logos/company-logo-8.png",
+    name: "Charles Sturt University",
+    imgPath: "/images/clients/charles-sturt.png",
   },
   {
-    imgPath: "/images/logos/company-logo-9.png",
+    name: "Stylus Tapes",
+    imgPath: "/images/clients/stylus-tapes.png",
   },
   {
-    imgPath: "/images/logos/company-logo-10.png",
+    name: "The Mortgage Agency",
+    imgPath: "/images/clients/the-mortgage-agency.png",
   },
   {
-    imgPath: "/images/logos/company-logo-11.png",
+    name: "Updoc",
+    imgPath: "/images/clients/updoc.png",
+  },
+  {
+    name: "Timberfix",
+    imgPath: "/images/clients/timberfix.png",
+  },
+  {
+    name: "Portless",
+    imgPath: "/images/clients/portless.png",
+  },
+  {
+    name: "Healthscreen",
+    imgPath: "/images/clients/healthscreen.png",
+  },
+  {
+    name: "Hays",
+    imgPath: "/images/clients/hays.png",
   },
 ];
 
@@ -134,7 +161,7 @@ const techStackIcons = [
   {
     name: "TypeScript",
     modelPath: "/models/ts-logo.glb",
-    scale: 0.05,
+    scale: 50,
     rotation: [0, 0, 0],
   },
   {
@@ -150,7 +177,7 @@ const myProjects = [
     subtitle: "Face verification microservice built for CobbyIQ",
     description:
       "A Siamese neural network that verifies employee identity by comparing a live face capture against a registered reference image. Built as a microservice for CobbyIQ to ensure only authorised users can access the workspace.",
-    imgPath: "/images/exp-cobbyiq.png",
+    imgPath: "/images/project-siamese.svg",
     link: "https://github.com/UncleSon21/Siamese-Neural-Network",
     tags: ["Python", "Deep Learning", "Computer Vision"],
   },
@@ -159,7 +186,7 @@ const myProjects = [
     subtitle: "Photo spoofing detection microservice built for CobbyIQ",
     description:
       "A liveness detection model that identifies photo spoofing attempts — catching cases where someone holds up a printed photo to bypass face verification. Works in tandem with the Siamese network as a security layer for CobbyIQ.",
-    imgPath: "/images/exp-cobbyiq.png",
+    imgPath: "/images/project-liveness.svg",
     link: null,
     tags: ["Python", "Computer Vision", "Security"],
   },
@@ -171,7 +198,7 @@ const blogPosts = [
     subtitle: "Payments, transactional email, and what actually tripped me up",
     tag: "VaniaFlorist",
     date: "2025",
-    imgPath: "/images/exp-vaniaflorist.png",
+    imgPath: "/images/blog-stripe-resend.svg",
     excerpt:
       "A walkthrough of wiring up Stripe Checkout and Resend for order confirmation emails — including the edge cases and gotchas that don't show up in the docs.",
     content: `
@@ -208,7 +235,7 @@ Payments and email both require you to care about failure states more than the h
     subtitle: "How I built CobbyIQ's AI knowledge engine and what I learned",
     tag: "CobbyIQ",
     date: "2026",
-    imgPath: "/images/exp-cobbyiq.png",
+    imgPath: "/images/blog-rag-pipeline.svg",
     excerpt:
       "Retrieval-Augmented Generation sounds complex until you break it down. Here is how I went from reading papers to building a working document Q&A pipeline.",
     content: `
@@ -241,7 +268,7 @@ Getting the retrieval to work is one thing. Getting it to cite the right source 
     subtitle: "The infrastructure decisions, mistakes, and tradeoffs along the way",
     tag: "CobbyIQ",
     date: "2026",
-    imgPath: "/images/exp-cobbyiq.png",
+    imgPath: "/images/blog-deploying-cobbyiq.svg",
     excerpt:
       "Shipping a SaaS product solo means owning every layer of deployment. This is what I learned about hosting, environment config, and keeping things stable under real traffic.",
     content: `
@@ -278,7 +305,7 @@ Add observability from day one. Logs, error tracking, and basic uptime monitorin
     subtitle: "What I got wrong about building a product people actually want",
     tag: "CobbyIQ",
     date: "2026",
-    imgPath: "/images/exp-cobbyiq.png",
+    imgPath: "/images/blog-saas-market.svg",
     excerpt:
       "Writing code is the easy part. Figuring out positioning, ICP, and whether anyone will pay for what you built — that is the harder lesson I am still working through.",
     content: `
@@ -311,7 +338,7 @@ Distribution. Building the product is a solved problem for a developer. Getting 
     subtitle: "UI refinements, seasonal theming, and the details that change the feel",
     tag: "VaniaFlorist",
     date: "2025",
-    imgPath: "/images/exp-vaniaflorist.png",
+    imgPath: "/images/blog-polishing-design.svg",
     excerpt:
       "A florist store should feel alive and seasonal. This post covers the design iterations I ran on VaniaFlorist — from layout tweaks to experimenting with themes that shift with the time of year.",
     content: `
@@ -361,7 +388,7 @@ const expCards = [
     review:
       "CobbyIQ is a clean, well-executed SaaS product. The AI integration is smooth, the UX is thoughtful, and it solves a real problem for growing teams. Strong founder execution from concept to launch.",
     imgPath: "/images/exp-cobbyiq.png",
-    logoPath: "/images/logo-cobbyiq.png",
+    logoPath: "/images/logo-cobbyiq.svg",
     title: "Founder / AI Full Stack Developer",
     date: "2025 - Present",
     responsibilities: [
@@ -389,7 +416,7 @@ const expCards = [
     review:
       "Son built a modern florist e-commerce site with strong attention to UI detail and user experience. The project shows real product thinking and strong front-end skills.",
     imgPath: "/images/exp-vaniaflorist.png",
-    logoPath: "/images/logo-vaniaflorist.png",
+    logoPath: "/images/logo-vaniaflorist.svg",
     title: "Founder / Full Stack Developer",
     date: "2025 - Present",
     responsibilities: [
