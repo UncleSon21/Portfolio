@@ -41,7 +41,7 @@ const Projects = () => (
               </p>
 
               {project.link ? (
-                
+                <a
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"

@@ -344,6 +344,21 @@ The seasonal switching works but I want to push it further — different hero co
 const expCards = [
     {
     review:
+      "Son shipped fast and went deep. He built the AI visibility pipeline and the client reporting portal end to end, and held a hard line on data accuracy — every figure in a client report traces back to real data or it doesn't ship.",
+    imgPath: "/images/earned-media-logo-white.png",
+    logoPath: "/images/earned-media-dots.png",
+    title: "AI Engineer / Full Stack Developer",
+    company: "Earned Media",
+    link: "https://earnedmedia.com.au",
+    date: "2026 - Present",
+    responsibilities: [
+      "Built an AI visibility engine that audits how ChatGPT, Gemini, Perplexity and Claude answer real buyer queries about a brand, scores the gaps, and turns the highest-value ones into content briefs.",
+      "Designed and shipped a multi-tenant client reporting portal — token-authed reports with a grounded chat agent that answers only from the client's own data, with strict tenant isolation and no fabricated figures.",
+      "Integrated Google Search Console, GA4, Asana, Slack and Google Sheets into an automated reporting pipeline, delivering the same report as both an interactive web page and a print-ready PDF.",
+    ],
+  },
+    {
+    review:
       "CobbyIQ is a clean, well-executed SaaS product. The AI integration is smooth, the UX is thoughtful, and it solves a real problem for growing teams. Strong founder execution from concept to launch.",
     imgPath: "/images/exp-cobbyiq.png",
     logoPath: "/images/logo-cobbyiq.png",
