@@ -20,6 +20,11 @@ section {
   width: 100dvw;
 }
 
+/* keep section headings clear of the fixed navbar when jumping to #anchors */
+[id] {
+  scroll-margin-top: 5rem;
+}
+
 @theme {
   --font-sans: "Mona Sans", sans-serif;
   --color-white-50: #EAF2FF;
@@ -139,6 +144,22 @@ section {
             @apply absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full;
           }
         }
+      }
+    }
+
+    .menu-toggle {
+      @apply lg:hidden flex items-center justify-center size-10 rounded-lg hover:bg-black-50 transition-colors duration-300;
+
+      img {
+        @apply size-6;
+      }
+    }
+
+    nav.mobile {
+      @apply lg:hidden mt-4 border-t border-black-50 pt-2 bg-black;
+
+      a {
+        @apply block py-3 text-lg text-white-50 hover:text-white transition-colors duration-300;
       }
     }
 

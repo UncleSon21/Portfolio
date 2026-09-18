@@ -28,13 +28,6 @@ const words = [
   { text: "Code", imgPath: "/images/code.svg" },
 ];
 
-const counterItems = [
-  { value: 2, suffix: "+", label: "Years of Experience" },
-  { value: 200, suffix: "+", label: "Satisfied Clients" },
-  { value: 5, suffix: "+", label: "Completed Projects" },
-  { value: 36, suffix: "%", label: "Completed KPI" },
-];
-
 const logoIconsList = [
   {
     name: "Earned Media",
@@ -102,40 +95,17 @@ const abilities = [
   {
     imgPath: "/images/seo.png",
     title: "Quality Focus",
-    desc: "Delivering high-quality results while maintaining attention to every detail.",
+    desc: "Production code with tests and guardrails, down to accuracy checks that stop a wrong figure reaching a client report.",
   },
   {
     imgPath: "/images/chat.png",
     title: "Reliable Communication",
-    desc: "Keeping you updated at every step to ensure transparency and clarity.",
+    desc: "Clear written updates and handover docs in the tools the team already uses, from Slack threads to pull requests.",
   },
   {
     imgPath: "/images/time.png",
     title: "On-Time Delivery",
-    desc: "Making sure projects are completed on schedule, with quality & attention to detail.",
-  },
-];
-
-const techStackImgs = [
-  {
-    name: "React Developer",
-    imgPath: "/images/logos/react.png",
-  },
-  {
-    name: "Python Developer",
-    imgPath: "/images/logos/python.svg",
-  },
-  {
-    name: "Backend Developer",
-    imgPath: "/images/logos/node.png",
-  },
-  {
-    name: "Interactive Developer",
-    imgPath: "/images/logos/three.png",
-  },
-  {
-    name: "Project Manager",
-    imgPath: "/images/logos/git.svg",
+    desc: "Work broken into small, shippable pieces, so progress is visible every week, not just at the deadline.",
   },
 ];
 
@@ -143,30 +113,35 @@ const techStackIcons = [
   {
     name: "React Developer",
     modelPath: "/models/react_logo-transformed.glb",
+    fallbackImg: "/images/logos/react.png",
     scale: 1,
     rotation: [0, 0, 0],
   },
   {
     name: "Python Developer",
     modelPath: "/models/python-transformed.glb",
+    fallbackImg: "/images/logos/python.svg",
     scale: 0.8,
     rotation: [0, 0, 0],
   },
   {
     name: "Backend Developer",
     modelPath: "/models/node-transformed.glb",
+    fallbackImg: "/images/logos/node.png",
     scale: 5,
     rotation: [0, -Math.PI / 2, 0],
   },
   {
-    name: "TypeScript",
+    name: "TypeScript Developer",
     modelPath: "/models/ts-logo.glb",
+    fallbackImg: "/images/typescript.png",
     scale: 50,
     rotation: [0, 0, 0],
   },
   {
     name: "Interactive Developer",
     modelPath: "/models/three.js-transformed.glb",
+    fallbackImg: "/images/logos/three.png",
     scale: 0.05,
     rotation: [0, 0, 0],
   },
@@ -193,10 +168,10 @@ const myProjects = [
 ]
 const blogPosts = [
   {
-    slug: "stripe-and-resend-vaniaflorist",
-    title: "Integrating Stripe and Resend into VaniaFlorist",
+    slug: "stripe-and-resend-amateur-florist",
+    title: "Integrating Stripe and Resend into Amateur Florist",
     subtitle: "Payments, transactional email, and what actually tripped me up",
-    tag: "VaniaFlorist",
+    tag: "Amateur Florist",
     date: "2025",
     imgPath: "/images/blog-stripe-resend.svg",
     excerpt:
@@ -333,14 +308,14 @@ Distribution. Building the product is a solved problem for a developer. Getting 
     `,
   },
   {
-    slug: "polishing-vaniaflorist-design",
-    title: "Polishing VaniaFlorist's Design",
+    slug: "polishing-amateur-florist-design",
+    title: "Polishing Amateur Florist's Design",
     subtitle: "UI refinements, seasonal theming, and the details that change the feel",
-    tag: "VaniaFlorist",
+    tag: "Amateur Florist",
     date: "2025",
     imgPath: "/images/blog-polishing-design.svg",
     excerpt:
-      "A florist store should feel alive and seasonal. This post covers the design iterations I ran on VaniaFlorist — from layout tweaks to experimenting with themes that shift with the time of year.",
+      "A florist store should feel alive and seasonal. This post covers the design iterations I ran on Amateur Florist — from layout tweaks to experimenting with themes that shift with the time of year.",
     content: `
 ## Why Design Matters for a Florist Store
 
@@ -369,9 +344,9 @@ The seasonal switching works but I want to push it further — different hero co
   },
 ]
 const expCards = [
-    {
-    review:
-      "Son shipped fast and went deep. He built the AI visibility pipeline and the client reporting portal end to end, and held a hard line on data accuracy — every figure in a client report traces back to real data or it doesn't ship.",
+  {
+    summary:
+      "Building Earned Media's AI search-visibility and client reporting platform, from the LLM audit pipeline to the reports clients read and question in plain English.",
     imgPath: "/images/earned-media-logo-white.png",
     logoPath: "/images/earned-media-dots.png",
     title: "AI Engineer / Full Stack Developer",
@@ -384,12 +359,14 @@ const expCards = [
       "Integrated Google Search Console, GA4, Asana, Slack and Google Sheets into an automated reporting pipeline, delivering the same report as both an interactive web page and a print-ready PDF.",
     ],
   },
-    {
-    review:
-      "CobbyIQ is a clean, well-executed SaaS product. The AI integration is smooth, the UX is thoughtful, and it solves a real problem for growing teams. Strong founder execution from concept to launch.",
+  {
+    summary:
+      "An AI knowledge-base SaaS for growing teams: upload your documents and get answers with page-level citations. Built solo, from idea to launch.",
     imgPath: "/images/exp-cobbyiq.png",
     logoPath: "/images/logo-cobbyiq.svg",
     title: "Founder / AI Full Stack Developer",
+    company: "CobbyIQ",
+    link: "https://cobbyiq.com",
     date: "2025 - Present",
     responsibilities: [
       "Founded and built CobbyIQ — an AI-powered knowledge management SaaS that lets teams upload docs and get instant, sourced answers from an AI teammate.",
@@ -398,8 +375,8 @@ const expCards = [
     ],
   },
   {
-    review:
-      "Son was reliable and quick to ship. He helped deliver key dashboard features and made the metrics easier to understand with clean UI and clear data presentation.",
+    summary:
+      "Full-stack internship on an engineering analytics dashboard, shipping DORA metrics features in TypeScript and React.",
     imgPath: "/images/DigiWizeLogo.svg",
     logoPath: "/images/DigiWizeLogo.svg",
     title: "Software Engineer Intern (Full Stack)",
@@ -412,25 +389,28 @@ const expCards = [
       "Collaborated with teammates to implement reusable components and improve overall UI consistency.",
     ],
   },
-    {
-    review:
-      "Son built a modern florist e-commerce site with strong attention to UI detail and user experience. The project shows real product thinking and strong front-end skills.",
-    imgPath: "/images/exp-vaniaflorist.png",
-    logoPath: "/images/logo-vaniaflorist.svg",
+  {
+    summary:
+      "A live Sydney florist store with online checkout and wedding bouquet hire, designed, built and run end to end.",
+    imgPath: "/images/exp-amateurflorist.png",
+    logoPath: "/images/logo-amateurflorist.svg",
     title: "Founder / Full Stack Developer",
+    company: "Amateur Florist",
+    link: "https://amateurflorist.vercel.app",
     date: "2025 - Present",
     responsibilities: [
-      "Designed and built a full florist e-commerce web app with product search, filter, cart, and clean product pages.",
-      "Implemented a scalable TypeScript codebase with reusable UI components and smooth animations.",
-      "Completed full build and preparing for deployment as a real business launch.",
+      "Built and launched a Sydney florist e-commerce site with product search and filters, a cart, and Stripe checkout.",
+      "Wrote the storefront in TypeScript with Vite, backed by Supabase for product data and edge functions for payments, Stripe webhooks and wedding enquiries.",
+      "Added wedding bouquet hire with an enquiry flow, plus seasonal theming across the site.",
     ],
   },
   {
-    review:
-      "Son handled support requests calmly and professionally, resolving issues quickly and communicating clearly with users. He was dependable and easy to work with.",
+    summary:
+      "Front-line technical support for staff and students at the University of Wollongong.",
     imgPath: "/images/exp_uow.png",
     logoPath: "/images/exp_uow.png",
     title: "IT Support Technician",
+    company: "University of Wollongong",
     date: "2023 - 2024",
     responsibilities: [
       "Provided technical support for staff and students, troubleshooting hardware, software, and connectivity issues.",
@@ -440,84 +420,24 @@ const expCards = [
   },
 ];
 
-const expLogos = [
-  {
-    name: "logo1",
-    imgPath: "/images/logo1.png",
-  },
-  {
-    name: "logo2",
-    imgPath: "/images/logo2.png",
-  },
-  {
-    name: "logo3",
-    imgPath: "/images/logo3.png",
-  },
-];
-
-const testimonials = [
-  {
-    name: "Esther Howard",
-    mentions: "@estherhoward",
-    review:
-      "I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
-    imgPath: "/images/client1.png",
-  },
-  {
-    name: "Wade Warren",
-    mentions: "@wadewarren",
-    review:
-      "Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
-    imgPath: "/images/client3.png",
-  },
-  {
-    name: "Guy Hawkins",
-    mentions: "@guyhawkins",
-    review:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    imgPath: "/images/client2.png",
-  },
-  {
-    name: "Marvin McKinney",
-    mentions: "@marvinmckinney",
-    review:
-      "Adrian was a pleasure to work with. He turned our outdated website into a fresh, intuitive platform that’s both modern and easy to navigate. Fantastic work overall.",
-    imgPath: "/images/client5.png",
-  },
-  {
-    name: "Floyd Miles",
-    mentions: "@floydmiles",
-    review:
-      "Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional!",
-    imgPath: "/images/client4.png",
-  },
-  {
-    name: "Albert Flores",
-    mentions: "@albertflores",
-    review:
-      "Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend and backend dev are top-notch.",
-    imgPath: "/images/client6.png",
-  },
-];
-
 const socialImgs = [
   {
-    name: "github",
+    name: "GitHub",
     imgPath: "/images/github.png",
     link: "https://github.com/UncleSon21"
   },
   {
-    name: "insta",
+    name: "Instagram",
     imgPath: "/images/insta.png",
     link: "https://www.instagram.com/sonnyl__/"
   },
   {
-    name: "fb",
+    name: "Facebook",
     imgPath: "/images/fb.png",
     link: "https://www.facebook.com/son.hung.3538039/"
   },
   {
-    name: "linkedin",
+    name: "LinkedIn",
     imgPath: "/images/linkedin.png",
     link: "https://linkedin.com/in/son-le-9b8546266"
   },
@@ -527,13 +447,9 @@ export {
   words,
   abilities,
   logoIconsList,
-  counterItems,
   expCards,
-  expLogos,
-  testimonials,
   socialImgs,
   techStackIcons,
-  techStackImgs,
   navLinks,
   blogPosts,
   myProjects,

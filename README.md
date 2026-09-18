@@ -1,68 +1,30 @@
-<div align="center">
+# Hung Son Le — Portfolio
 
-  <div>
-    <img src="https://img.shields.io/badge/-Three.js-black?style=for-the-badge&logo=three.js&logoColor=white" />
-    <img src="https://img.shields.io/badge/-GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=white" />
-    <img src="https://img.shields.io/badge/-Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
-  </div>
+Personal portfolio of Hung Son Le, a Sydney-based software engineer working on AI products and full-stack web apps.
 
-  <h3 align="center">Interactive 3D Portfolio Website</h3>
+It covers my work experience (Earned Media, CobbyIQ, DigiWize, Amateur Florist, University of Wollongong), skills, projects and writing, with an interactive 3D scene built in React Three Fiber.
 
-</div>
+## Tech stack
 
+- React 19 + Vite
+- React Router (writing posts at `/blog/:slug`)
+- Three.js, React Three Fiber and Drei for the 3D scenes
+- GSAP + ScrollTrigger for scroll animations
+- Tailwind CSS v4
+- EmailJS for the contact form
 
-## <a name="tech-stack">⚙️ Tech Stack</a>
-
-- Three.js
-- React Three Fiber
-- Drei
-- GSAP
-- Tailwind CSS
-- Vite
-- React 19
-
-## <a name="features">🔋 Features</a>
-
-### Features of the 3D Portfolio Project
-
-👉 Animated 3D models and reveal animations
-
-👉 Realistic lighting and shadows
-
-👉 GSAP-powered scroll interactions
-
-👉 Responsive design with Tailwind CSS and Flexbox/Grid
-
-👉 Micro Interactions
-
-👉 Multi-section layout (About, Projects, Contact)
-
-👉 Mobile optimized 3D experience
-
-and many more, including code architecture and reusability.
-
-## <a name="quick-start">🤸 Quick Start</a>
-
-**Prerequisites**
-
-Make sure you have the following installed on your machine:
-
-- [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/en)
-- [npm](https://www.npmjs.com/) (Node Package Manager)
-
-
-**Installation**
-
-Install the project dependencies using npm:
+## Getting started
 
 ```bash
 npm install
+npm run dev
 ```
 
-**Set Up Environment Variables**
+Then open http://localhost:5173.
 
-Create a new file named `.env` in the root of your project and add the following content:
+### Contact form
+
+The contact form sends through [EmailJS](https://www.emailjs.com/). Create a `.env` file in the project root (and add the same variables in Vercel):
 
 ```env
 VITE_APP_EMAILJS_SERVICE_ID=
@@ -70,14 +32,15 @@ VITE_APP_EMAILJS_TEMPLATE_ID=
 VITE_APP_EMAILJS_PUBLIC_KEY=
 ```
 
-Replace the placeholder values with your actual **[EmailJS](https://www.emailjs.com/)** credentials.
+Without them the form shows an error message instead of sending.
 
-**Running the Project**
+## Project structure
 
-```bash
-npm run dev
-```
+- `src/constants/index.js` holds all content: experience, projects, writing posts, skills and the client logo bar
+- `src/sections/` has one component per page section
+- `src/components/models/` has the 3D scenes; each is wrapped in `SceneErrorBoundary` so a failed model load never blanks the page
+- `public/images` and `public/models` hold the images and 3D models
 
-Open [http://localhost:5173](http://localhost:5173/) in your browser to view the project.
+## Deployment
 
-
+Deployed on Vercel. `vercel.json` rewrites routes to `index.html` so direct links to writing posts work.

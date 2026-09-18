@@ -3,7 +3,9 @@ import { Canvas } from "@react-three/fiber";
 import { useEffect } from "react";
 import * as THREE from "three";
 
-const TechIconCardExperience = ({ model }) => {
+import SceneErrorBoundary from "../../SceneErrorBoundary";
+
+const TechIconModel = ({ model }) => {
   const scene = useGLTF(model.modelPath);
 
   useEffect(() => {
@@ -16,10 +18,10 @@ const TechIconCardExperience = ({ model }) => {
         }
       });
     }
-  }, [scene]);
+  }, [scene, model.name]);
 
   return (
-    <Canvas>
+    <>
       <ambientLight intensity={0.3} />
       <directionalLight position={[5, 5, 5]} intensity={1} />
       <spotLight
@@ -54,8 +56,22 @@ const TechIconCardExperience = ({ model }) => {
       </Float>
 
       <OrbitControls enableZoom={false} />
-    </Canvas>
+    </>
   );
 };
+
+// If the model or the CDN-hosted environment map fails, show the flat icon instead
+// of letting the error blank the whole page.
+const TechIconCardExperience = ({ model }) => (
+  <SceneErrorBoundary
+    fallback={
+      <img src={model.fallbackImg} alt={model.name} className="size-24 object-contain" />
+    }
+  >
+    <Canvas>
+      <TechIconModel model={model} />
+    </Canvas>
+  </SceneErrorBoundary>
+);
 
 export default TechIconCardExperience;

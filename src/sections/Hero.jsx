@@ -1,7 +1,6 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
-import AnimatedCounter from "../components/AnimatedCounter";
 import Button from "../components/Button";
 import { words } from "../constants";
 import HeroExperience from "../components/models/hero_models/HeroExperience";
@@ -69,7 +68,7 @@ const Hero = () => {
                       >
                         <img
                           src={word.imgPath}
-                          alt="person"
+                          alt=""
                           className="xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50"
                         />
                         <span>{word.text}</span>
@@ -90,7 +89,7 @@ const Hero = () => {
             <Button
               text="See My Work"
               className="md:w-80 md:h-16 w-60 h-12"
-              id="counter"
+              target="experience"
             />
           </div>
         </header>
@@ -103,7 +102,6 @@ const Hero = () => {
         </figure>
       </div>
 
-      {/*<AnimatedCounter />*/}
     </section>
   );
 };

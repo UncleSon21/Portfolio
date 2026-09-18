@@ -7,6 +7,8 @@ import ContactExperience from "../components/models/contact/ContactExperience";
 const Contact = () => {
   const formRef = useRef(null);
   const [loading, setLoading] = useState(false);
+  // "sent" | "error" | null. Without this the visitor never knew whether the message went through.
+  const [status, setStatus] = useState(null);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -21,19 +23,25 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true); // Show loading state
+    setStatus(null);
+
+    const serviceId = import.meta.env.VITE_APP_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY;
 
     try {
-      await emailjs.sendForm(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        formRef.current,
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-      );
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error("EmailJS environment variables are not set");
+      }
 
-      // Reset form and stop loading
+      await emailjs.sendForm(serviceId, templateId, formRef.current, publicKey);
+
+      // Reset form and confirm
       setForm({ name: "", email: "", message: "" });
+      setStatus("sent");
     } catch (error) {
-      console.error("EmailJS Error:", error); // Optional: show toast
+      console.error("EmailJS Error:", error);
+      setStatus("error");
     } finally {
       setLoading(false); // Always stop loading, even on error
     }
@@ -62,7 +70,7 @@ const Contact = () => {
                     name="name"
                     value={form.name}
                     onChange={handleChange}
-                    placeholder="What’s your good name?"
+                    placeholder="What’s your name?"
                     required
                   />
                 </div>
@@ -93,7 +101,7 @@ const Contact = () => {
                   />
                 </div>
 
-                <button type="submit">
+                <button type="submit" disabled={loading}>
                   <div className="cta-button group">
                     <div className="bg-circle" />
                     <p className="text">
@@ -104,6 +112,17 @@ const Contact = () => {
                     </div>
                   </div>
                 </button>
+
+                {status === "sent" && (
+                  <p className="text-green-400" role="status">
+                    Thanks, your message has been sent. I’ll get back to you soon.
+                  </p>
+                )}
+                {status === "error" && (
+                  <p className="text-red-400" role="alert">
+                    Sorry, your message couldn’t be sent. Please try again, or reach me on LinkedIn.
+                  </p>
+                )}
               </form>
             </div>
           </div>
